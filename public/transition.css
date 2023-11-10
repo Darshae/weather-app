@@ -1,7 +1,8 @@
-#errorBox{
+#errorBox {
     display: none;
     transform: scale(0);
     opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 #searchBtn{
@@ -14,12 +15,11 @@
     transition: 0.6s ease-out;
 }
 
-.fadeIn{
-    animation: 0.5s fadeIn forwards;
-    animation-delay: 0.5s;
+.fadeIn {
+    animation: fadeIn 0.5s forwards 0.5s; /* Adjust the delay as needed */
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
     to {
         transform: scale(1);
         opacity: 1;

@@ -48,7 +48,7 @@ async function callAPI(){
             return
         }
 
-        if(response.status === 400 || data.location.country !== "Philippines"){
+        if(!response.ok || data.location.country !== "Philippines"){
             console.log(data)
             console.log(response)
             successBox.style.display = "none";    
