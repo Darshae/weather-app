@@ -59,6 +59,14 @@ async function callAPI(){
             container.classList.add('h-60');
             console.log(errorBox.classList)
             return;
+        }else{
+            errorBox.style.display = "none";    
+            successBox.style.display = "flex";
+            successBox.classList.add('flex-col');
+            successBox.classList.add('fadeIn');
+            container.classList.remove('h-60')
+            container.classList.add('h-[52rem]')
+            container.classList.add('xl:h-[58rem]')
         }
 
         //errorBox.style.display = "none";
@@ -104,16 +112,7 @@ async function callAPI(){
         uvIndex.textContent = `${data.current.uv}`;
         lastUpdate.textContent = `${data.current.last_updated}`;
 
-        successBox.style.display = "none";    
-        errorBox.style.display = "flex";
-        errorBox.classList.add('fadeIn');
-        //errorBox.style.display = "none";    
-        //successBox.style.display = "flex";
-        //successBox.classList.add('flex-col');
-        //successBox.classList.add('fadeIn');
-        container.classList.remove('h-60')
-        container.classList.add('h-[52rem]')
-        container.classList.add('xl:h-[58rem]')
+        
         
 
     } catch (error) {
