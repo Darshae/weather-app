@@ -64,28 +64,28 @@ async function callAPI(){
 
         switch(weatherCondition.textContent){
             case 'Sunny':
-                image.src = '../img/sunny.svg';
+                image.src = '/img/sunny.svg';
                 break;
             case 'Partly cloudy':
-                image.src = '../img/partly cloudy.svg';
+                image.src = '/img/partly cloudy.svg';
                 break;
             case 'Cloudy':
-                image.src = '../img/cloudy.svg';
+                image.src = '/img/cloudy.svg';
                 break;
             case 'Rainy':
-                image.src = '../img/rainy.svg';
+                image.src = '/img/rainy.svg';
                 break;
             case 'Patchy rain possible':
-                image.src = '../img/rainy.svg';
+                image.src = '/img/rainy.svg';
                 break;
             case 'Light rain shower':
-                image.src = '../img/rainy.svg';
+                image.src = '/img/rainy.svg';
                 break;
             case 'Moderate or heavy rain with thunder':
-                image.src = '../img/thunder.svg';
+                image.src = '/img/thunder.svg';
                 break;
             default:
-                image.src = '../img/404.svg';
+                image.src = '/img/404.svg';
         }
 
         city.textContent = data.location.name;
