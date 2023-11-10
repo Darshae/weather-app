@@ -37,7 +37,7 @@ locationSearch.addEventListener('keydown', (event) => {
 async function callAPI(){
     try {
 
-        const api = "http://api.weatherapi.com/v1/current.json?key=2d9d3845a5c0497497480619230910&q="
+        const api = "https://api.weatherapi.com/v1/current.json?key=2d9d3845a5c0497497480619230910&q="
 
         const location = locationSearch.value;
         const response = await fetch(api+location);
