@@ -29,7 +29,7 @@ const lastUpdate = document.querySelector("#last-update");
 const handleUIError = () => {
     successBox.style.display = "none";
     errorBox.style.display = "flex";
-    errorBox.classList.add(classes.fadeIn);
+    errorBox.classList.add('fadeIn');
     container.classList.remove('xl:h-[58rem]');
     container.classList.remove('h-[52rem]');
     container.classList.add('h-[35rem]');
