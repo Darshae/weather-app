@@ -49,6 +49,7 @@ async function callAPI(){
         }
 
         if(response.status === 400 || data.location.country !== "Philippines"){
+            console.log("HELLO")
             successBox.style.display = "none";    
             errorBox.style.display = "flex";
             errorBox.classList.add('fadeIn');
