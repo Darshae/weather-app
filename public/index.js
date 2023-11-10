@@ -32,7 +32,7 @@ const handleUIError = () => {
     errorBox.classList.add(classes.fadeIn);
     container.classList.remove('xl:h-[58rem]');
     container.classList.remove('h-[52rem]');
-    container.classList.add('h-[3rem]');
+    container.classList.add('h-[35rem]');
 };
 
 const handleUISuccess = () => {
