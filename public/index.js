@@ -104,10 +104,13 @@ async function callAPI(){
         uvIndex.textContent = `${data.current.uv}`;
         lastUpdate.textContent = `${data.current.last_updated}`;
 
-        errorBox.style.display = "none";    
-        successBox.style.display = "flex";
-        successBox.classList.add('flex-col');
-        successBox.classList.add('fadeIn');
+        successBox.style.display = "none";    
+        errorBox.style.display = "flex";
+        errorBox.classList.add('fadeIn');
+        //errorBox.style.display = "none";    
+        //successBox.style.display = "flex";
+        //successBox.classList.add('flex-col');
+        //successBox.classList.add('fadeIn');
         container.classList.remove('h-60')
         container.classList.add('h-[52rem]')
         container.classList.add('xl:h-[58rem]')
