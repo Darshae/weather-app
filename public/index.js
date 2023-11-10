@@ -26,6 +26,26 @@ const visibility = document.querySelector("#visibility");
 const uvIndex = document.querySelector("#uv-index");
 const lastUpdate = document.querySelector("#last-update");
 
+const handleUIError = () => {
+    successBox.style.display = "none";
+    errorBox.style.display = "flex";
+    errorBox.classList.add(classes.fadeIn);
+    container.classList.remove('xl:h-[58rem]');
+    container.classList.remove('h-[52rem]');
+    container.classList.add('h-60');
+    return
+};
+
+const handleUISuccess = () => {
+    errorBox.style.display = "none";    
+    successBox.style.display = "flex";
+    successBox.classList.add('flex-col');
+    successBox.classList.add('fadeIn');
+    container.classList.remove('h-60')
+    container.classList.add('h-[52rem]')
+    container.classList.add('xl:h-[58rem]')
+};
+
 searchButton.addEventListener('click', callAPI);
 
 locationSearch.addEventListener('keydown', (event) => {
@@ -49,28 +69,12 @@ async function callAPI(){
         }
 
         if(!response.ok || data.location.country !== "Philippines"){
-            console.log(data)
-            console.log(response)
-            successBox.style.display = "none";    
-            errorBox.style.display = "flex";
-            errorBox.classList.add('fadeIn');
-            container.classList.remove('xl:h-[58rem]');
-            container.classList.remove('h-[52rem]');
-            container.classList.add('h-60');
-            console.log(errorBox.classList)
+            handleUIError()
             return;
         }else{
-            errorBox.style.display = "none";    
-            successBox.style.display = "flex";
-            successBox.classList.add('flex-col');
-            successBox.classList.add('fadeIn');
-            container.classList.remove('h-60')
-            container.classList.add('h-[52rem]')
-            container.classList.add('xl:h-[58rem]')
+            handleUISuccess()
         }
 
-        //errorBox.style.display = "none";
-        //successBox.style.display = "block";
         weatherCondition.textContent = data.current.condition.text;
 
         switch(weatherCondition.textContent){
