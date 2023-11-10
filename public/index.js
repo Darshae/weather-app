@@ -32,7 +32,8 @@ const handleUIError = () => {
     errorBox.classList.add('fadeIn');
     container.classList.remove('xl:h-[58rem]');
     container.classList.remove('h-[52rem]');
-    container.classList.add('h-[35rem]');
+    container.classList.add('h-60');
+    container.classList.add('xl:h-60');
 };
 
 const handleUISuccess = () => {
@@ -41,6 +42,7 @@ const handleUISuccess = () => {
     successBox.classList.add('flex-col');
     successBox.classList.add('fadeIn');
     container.classList.remove('h-60')
+    container.classList.remove('xl:h-60');
     container.classList.add('h-[52rem]')
     container.classList.add('xl:h-[58rem]')
 };
