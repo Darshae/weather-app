@@ -2,7 +2,6 @@
     display: none;
     transform: scale(0);
     opacity: 0;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 #searchBtn{
@@ -22,7 +21,7 @@
 
 @keyframes fadeIn{
     to {
-        scale: 1;
+        transform: scale(1);
         opacity: 1;
     }
 }
