@@ -68,7 +68,7 @@ async function callAPI(){
             return
         }
 
-        if(data.location.country !== "Philippines"){
+        if(!response.ok || data.location.country !== "Philippines"){
             handleUIError()
             return;
         }else{
