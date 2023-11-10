@@ -57,6 +57,7 @@ async function callAPI(){
             container.classList.remove('xl:h-[58rem]');
             container.classList.remove('h-[52rem]');
             container.classList.add('h-60');
+            console.log(errorBox.classList)
             return;
         }
 
